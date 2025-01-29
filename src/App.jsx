@@ -8,13 +8,14 @@ import Nonprofits from './pages/Nonprofits';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
 
   return (
     <>
-      this
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/projects' element={<Projects />}/>

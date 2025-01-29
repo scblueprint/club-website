@@ -1,3 +1,7 @@
+import google from 'eslint-config-google';
+delete google.rules['valid-jsdoc'];
+delete google.rules['require-jsdoc'];
+
 import js from '@eslint/js'
 import globals from 'globals'
 import react from 'eslint-plugin-react'
@@ -5,7 +9,10 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  google,
+  js.configs.recommended,
+  jsdoc.configs['flat/recommended'],
+  react.configs.flat.recommended,
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
